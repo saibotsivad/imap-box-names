@@ -1,0 +1,25 @@
+{
+  "name": "imap-box-names",
+  "version": "1.0.0",
+  "description": "Given an IMAP object, produce the list of actual box names.",
+  "main": "index.js",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saibotsivad/imap-box-names.git"
+  },
+  "keywords": [
+    "imap"
+  ],
+  "author": "saibotsivad",
+  "license": "VOL",
+  "bugs": {
+    "url": "https://github.com/saibotsivad/imap-box-names/issues"
+  },
+  "homepage": "https://github.com/saibotsivad/imap-box-names#readme"
+}
