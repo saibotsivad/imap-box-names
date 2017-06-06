@@ -1,4 +1,4 @@
-module.exports = (imap, cb) => {
+module.exports = function imapBoxNames(imap, cb) {
 	imap.getBoxes((error, boxes) => {
 		if (error) {
 			cb(error)
