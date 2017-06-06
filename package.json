@@ -1,6 +1,6 @@
 {
   "name": "imap-box-names",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Given an IMAP object, produce the list of actual box names.",
   "main": "index.js",
   "devDependencies": {
