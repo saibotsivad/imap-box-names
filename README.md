@@ -1,5 +1,7 @@
 # imap-box-names
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/saibotsivad/imap-box-names.svg)](https://greenkeeper.io/)
+
 This module takes an instance of the
 [imap](https://github.com/mscdex/node-imap) module, and
 an error-first callback, generating all valid IMAP
