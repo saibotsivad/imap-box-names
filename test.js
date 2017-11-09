@@ -8,10 +8,11 @@ test('if there is an error return that error', t => {
 			cb(error)
 		}
 	}
-	boxNames(imapMock, outputError => {
-		t.ok(outputError === error, 'equivalent by reference')
-		t.end()
-	})
+	boxNames(imapMock)
+		.catch(outputError => {
+			t.ok(outputError === error, 'equivalent by reference')
+			t.end()
+		})
 })
 
 test('the returned array contains correct names', t => {
@@ -34,9 +35,9 @@ test('the returned array contains correct names', t => {
 			cb(false, boxObject)
 		}
 	}
-	boxNames(imapMock, (error, names) => {
-		t.notOk(error, 'there should be no error')
-		t.deepEqual(names, [ 'INBOX', 'INBOX.Archive', 'INBOX.Sent', 'INBOX.Sent/Gross' ], 'contains all box names')
-		t.end()
-	})
+	boxNames(imapMock)
+		.then(names => {
+			t.deepEqual(names, [ 'INBOX', 'INBOX.Archive', 'INBOX.Sent', 'INBOX.Sent/Gross' ], 'contains all box names')
+			t.end()
+		})
 })

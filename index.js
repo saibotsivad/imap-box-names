@@ -1,10 +1,12 @@
 module.exports = function imapBoxNames(imap, cb) {
-	imap.getBoxes((error, boxes) => {
-		if (error) {
-			cb(error)
-		} else {
-			cb(false, getRecursiveBoxNames(boxes))
-		}
+	return new Promise((resolve, reject) => {
+		imap.getBoxes((error, boxes) => {
+			if (error) {
+				reject(error)
+			} else {
+				resolve(getRecursiveBoxNames(boxes))
+			}
+		})
 	})
 }
 
