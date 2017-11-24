@@ -21,10 +21,13 @@ const imap = new Imap({
 
 // must wait until imap is ready
 imap.once('ready', () => {
-	boxNames(imap, (error, names) => {
-		console.log('error from imap module', error)
-		console.log('array of box names', names)
-	})
+	boxNames(imap)
+		.then(names => {
+			console.log('array of box names', names)
+		})
+		.catch(error => {
+			console.log('error from imap module', error)
+		})
 })
 ```
 
